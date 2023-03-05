@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="main">
+
+            <header class="header">
+                <img src="/Icons/Лого.png" alt="logo" class="logo_icon">
+                <span class="logo_name">WeatherCheck</span>
+            </header>
+
+            <section class="field">
+                <div class="container">
+                    <div id="preloader">
+                        <img src="/Icons/Spinner-1s-200px.gif" alt="preloader">
+                    </div>
+                    <div class="choice_field">
+                            <form class="choice_town_form">
+                                <input type="search" placeholder="Укажите город" id="input_search" autocomplete="off">
+                            </form>
+                            <div class="choice_izhevsk">
+                                <div class="choice_example">
+                                    Начните вводить город,
+                                    например, <strong>Ижевск</strong>
+                                </div>
+                                <div class="choice_bookmark">
+                                    <span>
+                                        Используйте значок «закладки»,
+                                        чтобы закрепить город на главной
+                                    </span>
+                                    <img src="/Icons/bookmark.svg" alt="bookmark">
+                                </div>
+                            </div>
+                            <div class="field_cards"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="weather-info">
+            <header class="header">
+                <img src="/Icons/Лого.png" alt="logo" class="logo_icon">
+                <span class="logo_name">WeatherCheck</span>
+            </header>
+            <section class="field field_info">
+                <div class="field_container">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

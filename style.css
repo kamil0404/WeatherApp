@@ -1,0 +1,259 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+#app {
+    position: relative;
+    overflow: hidden;
+}
+.container {
+    padding: 0 40px;
+}
+.field_container {
+    padding: 0 40px;
+}
+.weather-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+}
+.active {
+    transform: unset;
+}
+.header {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    max-height: 65px;
+    padding: 17px 23px;
+    background-color: #2A2F45;
+}
+.logo_icon {
+    max-width: 50px;
+    max-height: 50px;
+}
+.header .logo_name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.card {
+    padding: 23px;
+
+    background: #292E44;
+    opacity: 0.5;
+    border-radius: 6px;
+    text-align: center;
+    width: 270px;
+}
+.card_city {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 110.7%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+.card_temperature {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 110.7%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+.card_icon img {
+    width: 73px;
+    height: 66px;
+}
+.field {
+    background-color: #161B30;
+    height: 100vh;
+}
+.field_info {
+    background: radial-gradient(80.36% 80.36% at 50% 0%, #5A607C 0%, #161B30 100%);
+}
+.choice_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#input_search {
+    width: 510px;
+    padding: 18px 20px;
+    background: #2A2F45;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    margin-top: 80px;
+    margin-bottom: 43px;
+    outline: none;
+}
+.choice_searc_link {
+    text-decoration: none;
+    color: #fff;
+}
+.choice_izhevsk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.choice_example {
+    position: relative;
+    margin-bottom: 88px;
+    width: 190px;
+    
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8A91AB;
+}
+.choice_example::before {
+    content: url(/Icons/Arrow.svg);
+    position: absolute;
+    top: -15px;
+    left: -40px;
+}
+.choice_example strong {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+    cursor: pointer;
+}
+.choice_bookmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 23px;
+    width: 250px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8A91AB;
+}
+.field_back {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.field_btn_back {
+    color: #8A91AB;
+}
+.field_btn_back img {
+    margin-right: 20px;
+}
+.bookmark1 {
+    position: relative;
+    appearance: none;
+    height: 25px;
+    border-right: 15px solid #8A91AB;
+    border-bottom: 17px solid transparent;
+    cursor: pointer;
+}
+.bookmark1::before {
+    content: "";
+    position: absolute;
+    left: -1.5px;
+    height: 25px;
+    border-left: 11px solid #8A91AB;
+    border-bottom: 13px solid transparent;
+}
+.bookmark1:checked {
+    border-right-color: white;
+}
+.bookmark1:checked::before {
+    border-left-color: white;
+}
+.field_town_properties {
+    text-align: center;
+}
+.field_town {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 110.7%;
+    color: #FFFFFF;
+}
+.field_condition {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110.7%;
+    color: #FFFFFF;
+    margin-bottom: 39px;
+}
+.field_temperature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 25px;
+    margin-bottom: 68px;
+}
+.temperature {
+    font-weight: 600;
+    font-size: 129.755px;
+    line-height: 110.7%;
+    color: rgba(255, 255, 255, 1);
+    align-self: center;
+}
+.temperature_img {
+    align-self:center;
+}
+.temperature_img img {
+    width: 100px;
+    height: 100px;
+}
+.field_pressure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 9px;
+    margin-bottom: 32px;
+}
+.field_pressure span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.field_sunset_time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110.7%;
+    color: #8A91AB;
+}
+.field_cards {
+    display: flex;
+    gap: 35px;   
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.error {
+    display: block;
+    padding: 10px;
+    background: #fff;
+    color: #a81414;
+    font-size: 23px;
+}
+
+
+#preloader {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    z-index: 9;
+    display: none;
+}
+#preloader.show {
+    display: block;
+}
